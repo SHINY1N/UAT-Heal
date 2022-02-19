@@ -1,0 +1,9 @@
+game:GetService("UserInputService").InputBegan:Connect(function(input, isTyping)
+	if isTyping == false and input.KeyCode == Enum.KeyCode.K then
+		
+local string_1 = "Mushroom";
+local string_2 = "Pixie Dust";
+local Target = game:GetService("ReplicatedStorage").Events.Potion.MakePotion;
+Target:FireServer(string_1, string_2);
+	end
+end)
