@@ -7,3 +7,13 @@ local Target = game:GetService("ReplicatedStorage").Events.Potion.MakePotion;
 Target:FireServer(string_1, string_2);
 	end
 end)
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, isTyping)
+	if isTyping == false and input.KeyCode == Enum.KeyCode.L then
+		
+local string_1 = "Red Flower";
+local string_2 = "Mushroom";
+local Target = game:GetService("ReplicatedStorage").Events.Potion.MakePotion;
+Target:FireServer(string_1, string_2);
+	end
+end)
